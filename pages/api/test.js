@@ -5,7 +5,7 @@ export default function handler(req, res) {
       .then((res) => res.text())
       .then((text) => console.log(text))
       .catch((err) => console.log(err));
-    console.log("test", new Date().toISOString());
+    console.log(`got ${n}`);
   }, 1000);
 
   res.status(200).json({ success: new Date().toISOString() });
