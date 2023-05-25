@@ -1,6 +1,7 @@
 export default function handler(req, res) {
+  const n = Number(req.query.n);
   setTimeout(() => {
-    fetch("https://ca43-70-252-16-66.ngrok-free.app/response")
+    fetch(`https://ca43-70-252-16-66.ngrok-free.app/${n}`)
       .then((res) => res.text())
       .then((text) => console.log(text))
       .catch((err) => console.log(err));
